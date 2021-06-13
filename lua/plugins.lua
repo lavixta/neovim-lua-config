@@ -44,11 +44,11 @@ return require("packer").startup(function(use)
     -- Use gruvbox 
     use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
     -- Telescope
-    --use {"nvim-lua/popup.nvim", opt = true}
-    --use {"nvim-lua/plenary.nvim", opt = true}
-    --use {"nvim-telescope/telescope.nvim", opt = true}
-    --use {"nvim-telescope/telescope-fzy-native.nvim", opt = true}
-    --use {"nvim-telescope/telescope-project.nvim", opt = true}
+    use {"nvim-lua/popup.nvim", opt = true}
+    use {"nvim-lua/plenary.nvim", opt = true}
+    use {"nvim-telescope/telescope.nvim", opt = true}
+    use {"nvim-telescope/telescope-fzy-native.nvim", opt = true}
+    use {"nvim-telescope/telescope-project.nvim", opt = true}
 
     -- Debugging
     use {"mfussenegger/nvim-dap", opt = true}
@@ -100,10 +100,10 @@ return require("packer").startup(function(use)
     require_plugin("nvim-lspinstall")
     require_plugin('trouble.nvim')
     require_plugin("friendly-snippets")
-    --require_plugin("popup.nvim")
-    --require_plugin("plenary.nvim")
-    --require_plugin("telescope.nvim")
-    --require_plugin('telescope-project.nvim')
+    require_plugin("popup.nvim")
+    require_plugin("plenary.nvim")
+    require_plugin("telescope.nvim")
+    require_plugin('telescope-project.nvim')
     require_plugin("nvim-dap")
     require_plugin("nvim-compe")
     require_plugin("vim-vsnip")

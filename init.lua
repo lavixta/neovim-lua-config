@@ -12,12 +12,19 @@ require('lv-nvim-comment')
 require('lv-autopairs')
 require("nvim-compe")
 require('lv-treesitter')
+require('lv-telescope')
 require('lv-lsp-rooter')
 --vim.cmd('luafile '..CONFIG_PATH..'/settings.lua')
 require'lspinstall'.setup() -- important
 --Config
 vim.wo.number = true
-vim.api.nvim_command('nnoremap <C-m> :NvimTreeToggle<CR>')
+vim.api.nvim_command('nnoremap <silent>sf :NvimTreeToggle<CR>')
+vim.api.nvim_command('nnoremap <CR> :noh<CR><CR>')
+vim.api.nvim_command('nnoremap <leader>ff <cmd>Telescope find_files<cr>')
+vim.api.nvim_command('nnoremap <leader>fg <cmd>Telescope live_grep<cr>')
+vim.api.nvim_command('nnoremap <leader>fb <cmd>Telescope buffers<cr>')
+vim.api.nvim_command('nnoremap <leader>fh <cmd>Telescope help_tags<cr>')
+
 vim.wo.relativenumber = true
 vim.o.title = true
 vim.cmd('syntax on')
