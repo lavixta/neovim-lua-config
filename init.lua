@@ -20,11 +20,13 @@ require'lspinstall'.setup() -- important
 vim.wo.number = true
 vim.api.nvim_command('nnoremap <silent>sf :NvimTreeToggle<CR>')
 vim.api.nvim_command('nnoremap <CR> :noh<CR><CR>')
+vim.api.nvim_command('inoremap jl <Esc>')
+vim.api.nvim_command('inoremap <C-j> <Left>')
+vim.api.nvim_command('inoremap <C-l> <Right>')
 vim.api.nvim_command('nnoremap <leader>ff <cmd>Telescope find_files<cr>')
 vim.api.nvim_command('nnoremap <leader>fg <cmd>Telescope live_grep<cr>')
 vim.api.nvim_command('nnoremap <leader>fb <cmd>Telescope buffers<cr>')
 vim.api.nvim_command('nnoremap <leader>fh <cmd>Telescope help_tags<cr>')
-
 vim.wo.relativenumber = true
 vim.o.title = true
 vim.cmd('syntax on')
